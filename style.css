@@ -1,135 +1,171 @@
-/* Reset default margin and padding */
-* {
+/* Reset styles */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code,
+del, dfn, em, img, q, dl, dt, dd,
+ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+	border: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
 }
 
-/* Set body background and text color */
+/* Global styles */
 body {
-	background-color: #f7f7f7;
+	font-family: 'Open Sans', sans-serif;
 	color: #333;
-	font-family: Arial, sans-serif;
-	font-size: 16px;
-	line-height: 1.5;
 }
 
-/* Set header styles */
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+/* Header styles */
 header {
-	background-color: #333;
-	color: #fff;
-	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
 }
 
 header h1 {
-	font-size: 36px;
-	margin: 0;
-}
-
-header nav ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-header nav ul li {
-	margin: 0 10px;
-}
-
-header nav ul li a {
-	color: #fff;
-	text-decoration: none;
-	font-size: 18px;
-	font-weight: bold;
-}
-
-/* Set main section styles */
-main {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 40px 20px;
-}
-
-main h2 {
+	float: left;
 	font-size: 24px;
+	margin-top: 20px;
 	margin-bottom: 20px;
 }
 
-main p {
-	margin-bottom: 20px;
+nav {
+	float: right;
+	margin-top: 30px;
 }
 
-main ul {
+nav ul {
 	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	grid-gap: 20px;
 }
 
-main li a {
+nav ul li {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+nav ul li:first-child {
+	margin-left: 0;
+}
+
+nav ul li a {
 	display: block;
-	position: relative;
+	text-decoration: none;
+	color: #333;
+	padding: 10px;
 }
 
-main li a img {
+nav ul li a:hover {
+	background-color: #f5f5f5;
+}
+
+/* Main content styles */
+main {
+	margin-top: 80px;
+}
+
+.intro {
+	background-color: #f5f5f5;
+	padding: 80px 0;
+}
+
+.intro h2 {
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+
+.intro p {
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+.featured {
+	padding: 80px 0;
+}
+
+.featured h2 {
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+
+.portfolio {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.project {
+	flex-basis: calc(33.333% - 20px);
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.project:last-child {
+	margin-right: 0;
+}
+
+.project img {
+	display: block;
 	width: 100%;
 	height: auto;
 }
 
-main li a h3 {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	padding: 10px;
-	background-color: rgba(0, 0, 0, 0.7);
-	color: #fff;
+.project h3 {
 	font-size: 18px;
+	margin-top: 10px;
 }
 
-/* Set contact form styles */
-form {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 20px;
+.about {
+	padding: 80px 0;
 }
 
-label {
-	display: block;
-	margin-bottom: 10px;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-	display: block;
-	width: 100%;
-	padding: 10px;
-	border: 2px solid #ccc;
-	border-radius: 5px;
-	font-size: 16px;
+.about h2 {
+	font-size: 36px;
 	margin-bottom: 20px;
 }
 
-textarea {
-	height: 150px;
-}
-
-input[type="submit"] {
-	background-color: #333;
-	color: #fff;
-	padding: 10px 20px;
-	border: none;
-	border-radius: 5px;
+.about p {
 	font-size: 18px;
-	cursor: pointer;
+	line-height: 1.5;
 }
 
-input[type="submit"]:hover {
-	background-color: #555;
+.contact {
+	background-color: #f5f5f5;
+	padding: 80px 0;
 }
+
+.contact h2 {
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+
+form label {
+	display: block;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-radius: 3px
